@@ -1,6 +1,6 @@
 # API Prototyping
 
-## What is an Prototype?
+## What is an API Prototype?
 
 An API Prototype is a minified version of our API which just returns "hardcoded" data on all routes.
 
