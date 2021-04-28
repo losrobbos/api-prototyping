@@ -7,23 +7,10 @@ const posts = [
   // POST 1
   {
     _id: "p1",
-    title: 'How do you setup an API?', 
+    title: 'How do you setup an API?',
     text: 'To be honest: I hate APIs! I always did! Can somebody help me, how the get this sh** started?', 
     author: { _id: "r123", name: "losrobbos" }, // "POPULATED" post author
     likes: [ { _id: "v123", name: "wasabis" } ], // array of liking users...
-    comments: [
-      { 
-        _id: "c1",
-        text:  "Yeah, they suck. What helped me out was meditation", 
-        author: { _id: "v123", name: "wasabis" }, // "POPULATED" comment author
-        likes: [ { _id: "r123", name: "losrobbos" } ], // array of liking users...
-      }, 
-      { 
-        _id: "c2",
-        text:  "Oh really? Need to try that...", 
-        author: { _id: "r123", name: "losrobbos" }, // "POPULATED" comment author
-      },
-    ]
   },
 
   // POST 2
@@ -33,16 +20,31 @@ const posts = [
     text: 'See title, buddy. Nothing more to say here...', 
     author: { _id: "v123", name: "wasabis" }, // "POPULATED" post author
     likes: [ { _id: "r123", name: "losrobbos" }, { _id: "v123", name: "wasabis" } ], // array of liking users...
-    comments: [] // no comments so far
   },
 
+]
+
+const comments = [
+  { 
+    _id: "c1",
+    postId: "p1",
+    text:  'Yeah, they suck. What helped me out was meditation', 
+    author: { _id: "v123", name: "wasabis" }, // "POPULATED" comment author
+    likes: [ { _id: "r123", name: "losrobbos" } ], // array of liking users...
+  }, 
+  { 
+    _id: "c2",
+    postId: "p1",
+    text:  'Oh really? Need to try that...', 
+    author: { _id: "r123", name: "losrobbos" }, // "POPULATED" comment author
+  },
 ]
 
 router.get("/", (req, res, next) => {
   res.json(posts) // return hardcoded posts
 })
 
-router.get(":/id", (req, res, next) => {
+router.get("/:id", (req, res, next) => {
   let post = posts.find(post => post._id == req.params.id)
   res.json( post )
 })
@@ -53,13 +55,18 @@ router.post('/', (req, res, next) => {
   res.json(postNew)
 })
 
-router.patch("/:id", (req, res, next) => {
-  res.json( req.body )
+// post comments...
+
+router.get("/:id/comments", (req, res, next) => {
+  // filter comments by postId
+  const postComments = comments.filter(comment => comment.postId == req.params.id)
+  res.json(postComments)
 })
 
-router.delete("/:id", (req, res, next) => {
-  posts = posts.filter(post => post._id != req.params.id)
-  res.json({ message: `Deleted post with ID ${req.params.id}`})
+router.post("/:id/comments", (req, res, next) => {
+  let commentNew = { ...req.body, postId: req.params.id, _id: Date.now().toString( )}
+  comments.push(commentNew)
+  res.json(commentNew)
 })
 
 
