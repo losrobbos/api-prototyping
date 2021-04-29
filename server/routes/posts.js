@@ -7,8 +7,8 @@ const posts = [
   // POST 1
   {
     _id: "p1",
-    title: 'How do you setup an API?', 
-    text: 'To be honest: I hate APIs! I always did! Can somebody help me, how the get this sh** started?', 
+    title: "How do you setup an API?", 
+    text: "To be honest: I hate APIs! I always did! Can somebody help me, how to get this sh** started?", 
     author: { _id: "r123", name: "losrobbos" }, // "POPULATED" post author
     likes: [ { _id: "v123", name: "wasabis" } ], // array of liking users...
     comments: [
@@ -29,8 +29,8 @@ const posts = [
   // POST 2
   {
     _id: "p2",
-    title: 'I want to start with React. What to do?', 
-    text: 'See title, buddy. Nothing more to say here...', 
+    title: "I want to start with React. What to do?", 
+    text: "See title, buddy. Nothing more to say here...", 
     author: { _id: "v123", name: "wasabis" }, // "POPULATED" post author
     likes: [ { _id: "r123", name: "losrobbos" }, { _id: "v123", name: "wasabis" } ], // array of liking users...
     comments: [] // no comments so far
