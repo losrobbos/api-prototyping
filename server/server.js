@@ -8,8 +8,6 @@ const postsRouter = require("./routes/posts")
 app.use( cors() ) // allow sending data to us in general...
 app.use( express.json() ) // allow sending JSON data to us...
 
-
-
 // HOME ROUTE
 app.get('/', (req, res) => {
   res.send('Hello World!');
