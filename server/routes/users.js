@@ -28,13 +28,4 @@ router.post('/', (req, res, next) => {
   res.json( userNew )
 })
 
-router.patch("/:id", (req, res, next) => {
-  res.json( req.body )
-})
-
-router.delete("/:id", (req, res, next) => {
-  users = users.filter(user => user._id != req.params.id)
-  res.json({ message: `Deleted user with ID ${req.params.id}`})
-})
-
 module.exports = router
