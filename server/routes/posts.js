@@ -40,10 +40,12 @@ const comments = [
   },
 ]
 
+// /posts
 router.get("/", (req, res, next) => {
   res.json(posts) // return hardcoded posts
 })
 
+// /posts/123
 router.get("/:id", (req, res, next) => {
   let post = posts.find(post => post._id == req.params.id)
   res.json( post )
@@ -57,12 +59,14 @@ router.post('/', (req, res, next) => {
 
 // post comments...
 
+// /posts/123/comments
 router.get("/:id/comments", (req, res, next) => {
   // filter comments by postId
   const postComments = comments.filter(comment => comment.postId == req.params.id)
   res.json(postComments)
 })
 
+// /posts/123/comments
 router.post("/:id/comments", (req, res, next) => {
   let commentNew = { ...req.body, postId: req.params.id, _id: Date.now().toString( )}
   comments.push(commentNew)
