@@ -33,7 +33,8 @@ Integrating a minimal API into our frontend instead provides us with very valuab
 
 - testing the complete flow of information exchange between frontend and backend
   - e.g. sending new items to backend and receiving them back
-  - storing received items in state. and redirect to other page
+  - storing received items in state and check correct rendering in JSX
+  - redirect to other page after a data fetch and check correct data rendering on target page
 
 - clarifiying the data exchange formats and resolve misunderstanding between developers early!
   - which data does the frontend expects to get from API in order to render the frontend correctly?
