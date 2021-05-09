@@ -27,7 +27,7 @@ Quite often the frontend developers have a different expectation of the data to 
 
 This will result in failed frontend data processing after a data fetch, therefore failed renderings and all sorts of weird error messages. And these issues are very tricky to debug, because both frontend & backend developers typically need to debug them together. And if there is no common understanding of the data format to exchange, it is likely to get confusing.
 
-An API prototype can help to spot those misunderstandings - which are very normal - early in the projct and help clarifying them before (!) a lot of unnecessary work is done on both sides.
+An API prototype can help to spot those misunderstandings - which are very normal - early in the project and help clarifying them before (!) a lot of unnecessary work is done on both sides.
 
 An API prototype can be developed much quicker than an actual full-fledged API where we would need to setup the database connection, models, schemas, controllers, middleware etc.
 
