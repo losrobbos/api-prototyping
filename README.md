@@ -41,7 +41,7 @@ Integrating a minimal API into our frontend instead provides us with very valuab
 - clarifiying the data exchange formats and resolve misunderstanding between developers early!
   - which data does the frontend expects to get from API in order to render the frontend correctly?
   - the backend can provide routes as early as possible with necessary information
-  - data fields & formats can be discussed early, before heave database schemas, models and seed scripts are created
+  - data fields & formats can be discussed early, before heavy database connects, schemas, models and seed scripts are created
   - once the exchange formats are clarified, the backend developer can implement a database
 
 - test error response handling
