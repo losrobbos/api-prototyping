@@ -27,7 +27,7 @@ This will result in failed frontend data processing after a data fetch, therefor
 
 An API prototype can help to spot those misunderstandings - which are very normal - early and help clarifying (!) them early before a lot of unnecessary work is done on both sides.
 
-An API prototype usually can be developed much quicker than an actual full-fledged API where we would need to setup the database connection, models, schemas, controllers, middleware etc.
+An API prototype can be developed much quicker than an actual full-fledged API where we would need to setup the database connection, models, schemas, controllers, middleware etc.
 
 Integrating a minimal API into our frontend instead provides us with very valuable benefits:
 
