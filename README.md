@@ -23,7 +23,7 @@ The whole backend structure HIGHLY depends on the data model (so the data collec
 
 Quite often the frontend developers have a different expectation of the data to receive from the backend than the backend developers, who maybe will provide the data in the routes differently than expected (e.g. other format of date fields, missing fields, unexpected structure or nesting of items). 
 
-This will result in failed frontend data processing after a fetches & failed renderings and weird error messages. And these issues are very tricky to debug, because both frontend & backend developers typically need to debug them together. And if there is no common understanding of the data format to exchange, it is likely to get confusing.
+This will result in failed frontend data processing after a data fetch, therefore failed renderings and all sorts of weird error messages. And these issues are very tricky to debug, because both frontend & backend developers typically need to debug them together. And if there is no common understanding of the data format to exchange, it is likely to get confusing.
 
 An API prototype can help to spot those misunderstandings - which are very normal - early and help clarifying (!) them early before a lot of unnecessary work is done on both sides.
 
