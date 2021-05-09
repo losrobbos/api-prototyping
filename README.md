@@ -21,7 +21,7 @@ A common issue in fullstack development is a misunderstanding of the DATA EXCHAN
 
 The whole backend structure HIGHLY depends on the data model (so the data collection and their relationships). Changes of the data model structure often result in changes of the whole backend structure (schemas, routes, controllers, validators, etc)
 
-Quite often the frontend developers have a different expectation of the data to receive from the backend than the backend developers, who maybe will provide the data in the routes differently than expected (e.g. other format of date fields, missing fields or unexpected structure or nesting of items). This will result in failed frontend data processing after a fetches & failed renderings and weird error messages.
+Quite often the frontend developers have a different expectation of the data to receive from the backend than the backend developers, who maybe will provide the data in the routes differently than expected (e.g. other format of date fields, missing fields, unexpected structure or nesting of items). This will result in failed frontend data processing after a fetches & failed renderings and weird error messages.
 
 An API prototype can help to spot those misunderstandings - which are very normal - early and help clarifying (!) them early before a lot of unnecessary work is done on both sides.
 
